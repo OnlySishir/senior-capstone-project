@@ -1,6 +1,44 @@
+
+h3.bold{
+    font-weight: bold;
+}
+
+h4.card-title{
+  font-weight: bold;
+}
+
+h5.bold{
+  font-weight: bold;
+}
+
+h6.light{
+  color: dimgrey;
+}
+
+h7.card-subtitle{
+  color: dimgrey;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-title-alt{
+  color: cadetblue;
+}
+
 .jumbotron {
   background-image: url("../img/LeslieArt.jpg");
   height: 500px;
   background-size: cover;
   color: white;
 }
+
