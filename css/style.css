@@ -1,0 +1,6 @@
+.jumbotron {
+  background-image: url("../img/LeslieArt.jpg");
+  height: 500px;
+  background-size: cover;
+  color: white;
+}
