@@ -48,6 +48,13 @@ h7.card-subtitle {
   color: white;
 }
 
+.jumbotron-artist {
+  background-image: url("../img/brush.jpeg");
+  height: 500px;
+  background-size: cover;
+  color: white;
+}
+
 .jumbotron-special {
   background-image: none;
   background-color: dimgrey;
