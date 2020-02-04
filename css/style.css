@@ -270,10 +270,14 @@ a.socialIcon:hover, .socialHoverClass {
 /* about us page */
 .text2 { padding-left: 40px; }
 
-/* side bar for admin page */
+.text2 { padding-left: 40px;
+  padding-right: 40px;
+}
 
+
+/*sidebar for admin page */
 .sidenav {
-  height: 600px;
+  height: 100%;
   width: 160px;
   position: fixed;
   z-index: 1;
@@ -281,7 +285,7 @@ a.socialIcon:hover, .socialHoverClass {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .sidenav a {
@@ -290,13 +294,14 @@ a.socialIcon:hover, .socialHoverClass {
   font-size: 25px;
   color: #818181;
   display: block;
-  
-
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
