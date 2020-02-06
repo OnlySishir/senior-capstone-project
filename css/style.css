@@ -2,12 +2,26 @@ h3.bold {
   font-weight: bold;
 }
 
-h5.subtite {
+h5.subtitle {
   color: dimgrey;
 }
 
 h4.card-title {
   font-weight: bold;
+  color: 
+black;
+}
+
+.art-call-link{
+  color: #000;
+}
+
+.card-slides{
+  height: 350px;
+  background-color: whitesmoke;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: auto;
 }
 
 h5.bold {
