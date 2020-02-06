@@ -2,6 +2,10 @@ h3.bold {
   font-weight: bold;
 }
 
+h5.subtite {
+  color: dimgrey;
+}
+
 h4.card-title {
   font-weight: bold;
 }
