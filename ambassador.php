@@ -80,7 +80,7 @@
 
 </header>
 
-    <div class="text2">
+    <div class="text2"><br>
     <h2>Become a Digital Ambassador to Help Strengthen Your Creative Community.</h2>
     <br>
     <h4>We know why you&#8217;re here on Embrace Creatives. Well, yeah, you want to generate professional relationships and revenue but it&#8217;s more than that&#8230;It&#8217;s because you realize how important it is to expose artists and art-centric business owners to creative empowerment like;</h4>
@@ -192,13 +192,13 @@
       <h1>Connections</h1>
       <ul>
         <li><a href="#" class="">Members</a></li>
-        <li><a href="#" class="">Events</a></li>
+        <li><a href="events.html" class="">Events</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Opportunities</h1>
       <ul>
-        <li><a href="#" class="">Art Calls</a></li>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
         <li><a href="#" class="">Grants</a></li>
         <li><a href="#" class="">Advertise</a><li>
       </ul>

@@ -2,6 +2,8 @@
     session_start(); 
     include("functions.php");
 ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,33 +27,6 @@
 
 
   </head>
-    <?php
-        if(isset($_POST['signup'])){
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $confirmpassword = $_POST['confirmpassword'];
-            $postalcode = $_POST['postalcode'];
-            $type = $_POST['type'];
-            $link = $_POST['link'];
-            $info = $_POST['info'];
-            $message = "$lastname $firstname would like to request an account.";
-            if ($_POST['password'] == $_POST['confirmpassword']) {
-              $query = "INSERT INTO `requests` (`id`, `firstname`, `lastname`, `email`, `password`,  `confirmpassword` , `postalcode`, `type`, `link`, `info`, `message`, `date`) VALUES (NULL, '$firstname', '$lastname', '$email', '$password', '$confirmpassword' , '$postalcode' , '$type', '$link', '$info', '$message', CURRENT_TIMESTAMP)";
-            if(performQuery($query)){
-                echo "<script>alert('Your account request is now pending for approval. Please wait for confirmation. Thank you.')</script>";
-            }else{
-                echo "<script>alert('Unknown error occured.')</script>";
-            }
-          }else{
-            echo "<script>alert('wrong details, please try again.')</script>";
-        }
-        }
-
-    
-    ?>
-
     	
 <body class="text-center">
      <!-- Nav Bar Start -->
@@ -107,9 +82,37 @@
       </div>
     </nav>
     <!-- Nav Bar End -->
-      <div class="container">
+
+
+    <?php
+        if(isset($_POST['signup'])){
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $confirmpassword = $_POST['confirmpassword'];
+            $postalcode = $_POST['postalcode'];
+            $type = $_POST['type'];
+            $link = $_POST['link'];
+            $info = $_POST['info'];
+            $message = "$lastname $firstname would like to request an account.";
+            if ($_POST['password'] == $_POST['confirmpassword']) {
+              $query = "INSERT INTO `requests` (`id`, `firstname`, `lastname`, `email`, `password`,  `confirmpassword` , `postalcode`, `type`, `link`, `info`, `message`, `date`) VALUES (NULL, '$firstname', '$lastname', '$email', '$password', '$confirmpassword' , '$postalcode' , '$type', '$link', '$info', '$message', CURRENT_TIMESTAMP)";
+            if(performQuery($query)){
+                echo 'Your account request is now pending for approval. Please wait for confirmation. Thank you.';
+            }else{
+                echo "<script>alert('Unknown error occured.')</script>";
+            }
+          }else{
+            echo '<font color="red">wrong details, please try again.</font>';
+        }
+        }
+
+    
+    ?>
+      <br><br><div class="container">
             <form method="post" class="form-signin">
-              <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+              <!-- <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
               <h1 class="h3 mb-3 font-weight-normal">Register</h1>
               <label for="inputFirstname" class="sr-only">Firstname</label>
               <center><input name="firstname" type="text" id="inputFirstname" style= width:500px class="form-control" placeholder="Firstname" required autofocus></center><br>
@@ -128,7 +131,7 @@
               <label for="inputInfo" class="sr-only">Information</label>
               <center><input name="info" type="text" id="inputLink" style= width:500px class="form-control" placeholder="How did you find out about us?"><br></center>
 
-              <center><select class="browser-default custom-select custom-select-lg mb-3" style= width:500px name="type" >
+              <center><select class="browser-default custom-select custom-select-nm mb-3" style= width:500px name="type" >
   <option selected>Select user type</option>
   <option value="ARTIST/DESIGNER">ARTIST/DESIGNER</option>
   <option value="BUSINESS/TRADE">BUSINESS/TRADE</option>
@@ -148,22 +151,22 @@
       <ul>
         <li><a href="about.html" class="">About EC</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="#">Become an Ambassador</a></li>
+        <li><a href="ambassador.php">Become an Ambassador</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Company</h1>
       <ul>
-        <li><a href="#" class="">Privacy Policy</a></li>
-        <li><a href="#" class="">Terms & Conditions</a></li>
-        <li><a href="#" class="">Community Guidelines</a></li>
+      <li><a href="terms and conditions.html" class="">Privacy Policy</a></li>
+        <li><a href="terms and conditions.html" class="">Terms & Conditions</a></li>
+        <li><a href="Community Guidlines.html" class="">Community Guidelines</a></li>
         <li><a href="#" class="">Report Abuse</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Education</h1>
       <ul>
-        <li><a href="#" class="">Blog</a></li>
+      <li><a href="blog-home.html" class="">Blog</a></li>
         <li><a href="#" class="">EC User Manual</a></li>
       </ul>
     </div>
@@ -177,13 +180,13 @@
       <h1>Connections</h1>
       <ul>
         <li><a href="#" class="">Members</a></li>
-        <li><a href="#" class="">Events</a></li>
+        <li><a href="events.html" class="">Events</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Opportunities</h1>
       <ul>
-        <li><a href="#" class="">Art Calls</a></li>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
         <li><a href="#" class="">Grants</a></li>
         <li><a href="#" class="">Advertise</a><li>
       </ul>

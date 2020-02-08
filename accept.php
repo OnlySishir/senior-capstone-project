@@ -18,7 +18,7 @@
         }
         $query .= "DELETE FROM `requests` WHERE `requests`.`id` = '$id';";
         if(performQuery($query)){
-            echo "Account has been accepted.";
+            header("Location:accept.html");
         }else{
             echo "Unknown error occured. Please try again.";
         }
@@ -28,4 +28,10 @@
     
 ?>
 <br/><br/>
-<a href="home.php">Back</a>
+<button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

@@ -5,6 +5,17 @@
         header('location:login.php');
     }
 ?>
+
+<?php 
+ 
+ if ($_SESSION ['type'] == null)
+ {
+  header("Location:login.php");
+ }
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,8 +47,8 @@
     
                 ?>
 
-       <!-- Nav Bar Start -->
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             <!-- Nav Bar Start -->
+             <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html">
          <img src="./img/EC_logo-Black.png" alt="Logo" />
        </a>
@@ -58,21 +69,9 @@
          </form>
          <ul class="navbar-nav ml-auto">
            <li class="nav-item dropdown">
-             <a
-               class="nav-link dropdown-toggle"
-               href="#"
-               id="dropdown03"
-               data-toggle="dropdown"
-               aria-haspopup="true"
-               aria-expanded="false"
-               >Shop
-             </a>
-             <div class="dropdown-menu" aria-labelledby="dropdown03">
-               <a class="dropdown-item" href="#">Shop by Category</a>
-               <a class="dropdown-item" href="#">Shop by Artist</a>
-               <a class="dropdown-item" href="#">Shop by Location</a>
-             </div>
-           </li>
+             <li class="nav-item">
+            <a class="nav-link" href="admin.php">Admin</a>
+          </li> 
            <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li> 
@@ -93,9 +92,9 @@
             
                     ?>
                 
-                    <h1 class="jumbotron-heading"><?php echo $row['email'] ?></h1>
-                      <p class="lead text-muted"><?php echo $row['message'] ?></p>
-                      <p class="lead text-muted"><b>Website: <b><?php echo $row['link'] ?></p>
+                    <p><b>Email Address:</b> <?php echo $row['email'] ?></p>
+                      <p><?php echo $row['message'] ?></p>
+                      <p><b>Website:</b> <?php echo $row['link'] ?></p>
                       <p>
                         <a href="accept.php?id=<?php echo $row['id'] ?>" class="btn btn-primary my-2">Accept</a>
                         <a href="reject.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary my-2">Reject</a>

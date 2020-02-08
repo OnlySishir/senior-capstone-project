@@ -1,7 +1,9 @@
-<?php
-    session_start(); 
-    include("functions.php");
-?>
+<?php  
+ session_start();  
+ include("functions.php");
+ ?>
+
+ 
 <!doctype html>
 <head>
 <html lang="en">
@@ -27,30 +29,8 @@
   </head>
  
         
-      <?php
       
-        if(isset($_POST['signin'])){
-            $password = $_POST['password'];
-            $email = $_POST['email'];
-            $query = "SELECT * from `accounts`;";
-            if(count(fetchAll($query)) > 0){ //this is to catch unknown error.
-                  foreach(fetchAll($query) as $row){
-                    if($row['email']==$email&&$row['password']==$password){
-                        $_SESSION['login'] = true;
-                        $_SESSION['type'] = $row['type'];
-                        header('location:admin.php');
-                    }else{
-                        echo "<script>alert('Wrong login details.')</script>";
-                        header("Location:login.php");
-                    }
-                }
-            }else{
-                echo "<script>alert('Error.')</script>";
-            }
-
-        }
-      
-      ?>
+              
 
 <body class="text-center">
      <!-- Nav Bar Start -->
@@ -108,14 +88,40 @@
     <!-- Nav Bar End -->
       <div class="container">
             <form method="post" class="form-signin">
-              <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-              <h1 class="h3 mb-3 font-weight-normal">Welcome</h1>
+
+              <br><h1 class="h3 mb-3 font-weight-normal">Welcome</h1>
               <label for="inputEmail" class="sr-only">Email address</label>
               <center><input name="email" type="email" id="inputEmail" style= width:500px class="form-control" placeholder="Email address" required autofocus><br></center>
               <label for="inputPassword" class="sr-only">Password</label>
               <center><input name="password" type="password" id="inputPassword" style= width:500px class="form-control" placeholder="Password" required><br></center>
               <center><button name="signin" class="btn btn-lg btn-primary btn-block" style= width:500px type="submit">Login</button></center><br>
-              <a href="signup.php" class="mt-5 mb-3 text-muted">Don't have an account, register here</a><br><br>
+    <?php
+      
+      if(isset($_POST['signin'])){
+          $password = $_POST['password'];
+          $email = $_POST['email'];
+          $query = "SELECT * from `accounts`";
+          $_SESSION['login'] = false;
+          $users = fetchAll($query);
+          if (count($users) > 0) { //this is to catch unknown error.
+              foreach ($users as $row){
+                  if($row['email']==$email&&$row['password']==$password){
+                      $_SESSION['login'] = true;
+                      $_SESSION['type'] = $row['type'];
+                      break;
+                  }
+              }
+              if ($_SESSION['login']) {
+                  header('location:home.php');
+              }
+              else {
+                  echo "<script>alert('Wrong login details.')</script>";
+              }
+            }
+            
+          }
+    ?>
+              <br><class="mt-5 mb-3 text-muted">Don't have an account? <a href="signup.php">register here</a><br><br>
               </form>
           </div>
 
@@ -126,23 +132,23 @@
       <h1>ABOUT</h1>
       <ul>
         <li><a href="about.html" class="">About EC</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Become an Ambassador</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ambassador.php">Become an Ambassador</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Company</h1>
       <ul>
-        <li><a href="#" class="">Privacy Policy</a></li>
-        <li><a href="#" class="">Terms & Conditions</a></li>
-        <li><a href="#" class="">Community Guidelines</a></li>
+      <li><a href="terms and conditions.html" class="">Privacy Policy</a></li>
+        <li><a href="terms and conditions.html" class="">Terms & Conditions</a></li>
+        <li><a href="Community Guidlines.html" class="">Community Guidelines</a></li>
         <li><a href="#" class="">Report Abuse</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Education</h1>
       <ul>
-        <li><a href="#" class="">Blog</a></li>
+        <li><a href="blog-home.html" class="">Blog</a></li>
         <li><a href="#" class="">EC User Manual</a></li>
       </ul>
     </div>
@@ -156,13 +162,13 @@
       <h1>Connections</h1>
       <ul>
         <li><a href="#" class="">Members</a></li>
-        <li><a href="#" class="">Events</a></li>
+        <li><a href="events.html" class="">Events</a></li>
       </ul>
     </div>
     <div class="col">
       <h1>Opportunities</h1>
       <ul>
-        <li><a href="#" class="">Art Calls</a></li>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
         <li><a href="#" class="">Grants</a></li>
         <li><a href="#" class="">Advertise</a><li>
       </ul>
@@ -190,4 +196,3 @@
         
        </body>
 </html>
-
