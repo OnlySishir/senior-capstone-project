@@ -24,6 +24,11 @@ black;
   width: auto;
 }
 
+.card-aboutEC{
+    background-color: rgb(234, 237, 238);
+    text-align: center;
+}
+
 h5.bold {
   font-weight: bold;
 }
