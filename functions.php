@@ -1,7 +1,6 @@
 <?php
-
     
-define('DBINFO','mysql:host=192.254.180.255;dbname=ecreativ_EmbraceCreatives');
+define('DBINFO','mysql:host=gator3033.hostgator.com;dbname=ecreativ_EmbraceCreatives');
 define('DBUSER','ecreativ_ecreati');
 define('DBPASS','Pass1234');
 
