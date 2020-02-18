@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<br>
+
+<div class="container-fluid">
+      <div class="jumbotron">
+        <div class='row justify-content-md-center'>
+          <div class='col-md-3'>
+            <img src="./img/default-user.PNG" class="img-circle" alt="Profile Picture" style="width: 300px;">
+          </div>
+          <div class='col-md-3'>
+            <h1 class="display-4">User's Name</h1>
+            <br>
+            
+          </div>
+          <div class='col-md-3'>
+            <h3 class="card-subtitle">User's Location</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>a quick description about the user. This can be similar to the about me section</p>
+      </div>
+</div>
+
+<br>
+<div class="container">
+
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#art">Art For Sale</a></li>
+    <li><a data-toggle="tab" href="#sold">Sold Art</a></li>
+    <li><a data-toggle="tab" href="#about">More About This User</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="art" class="tab-pane fade">
+      <h3>Artwork For Sale</h3>
+      <p>These are all the artwork that are being sold by this user</p>
+    </div>
+    <div id="sold" class="tab-pane fade">
+      <h3>Artwork Sold</h3>
+      <p>These are the artworks sold by this user</p>
+    </div>
+    <div id="about" class="tab-pane fade">
+        <h3>Artist Statement</h3>
+        <p>More about me</p>
+        <br>
+
+        <h3>Exhibitions</h3>
+        <p>What I have done in the past</p>
+        <br>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+function openProfile(evt, profileTab) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(profileTab).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
