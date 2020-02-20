@@ -19,8 +19,14 @@
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
+<style>
+      .textstyle{
+        padding-left: 420px;
+        padding-right: 40px;
+        text-align: justify;
+    }
 
-
+</style>
   </head>
     	
 <body class="text-center">
@@ -70,10 +76,13 @@
     <!-- Nav Bar End -->
 
 
-      <br><br><div class="container">
-            <form method="post" class="form-signin">
+    <form method="post" class="form-signin" onsubmit="if(document.getElementById('agree').checked) { return true; } else {alert('Please indicate that you have read and agree to the Terms and Conditions and Community Guidelines'); return false; }">
               <h1 class="h3 mb-3 font-weight-normal"><b>Register</b></h1>
-              <h2 class="h4 mb-4 font-weight-normal"><b>Basic Artist/Designer</b></h2>
+            </div>
+            <h4 class="ex1"><b>Basic Artist/Designer</b></h4>
+              <div class="textstyle">You sell your art, product or service and/or have a career in an art or design <br> industry. You proudly say you are a fashion designer, mural artist, painter, sculptor,<br> graphic artist, jeweler, quilter, illustrator, toy designer, industrial designer,<br>videographer, model, etc...</div><br>
+              <div class="textstyle"><span class="required">*</span>Required field</div>
+              <div class="container"></div>
               <label for="inputFirstname" class="sr-only">Firstname</label>
               <center><input name="firstname" type="text" id="inputFirstname" style= width:500px class="form-control" placeholder="Firstname *" required autofocus></center><br>
                 <label for="inputLastname" class="sr-only">Lastname</label>
@@ -83,24 +92,36 @@
                 <label for="inputEmail" class="sr-only">Email address</label>
               <center><input name="email" type="email" id="inputEmail" style= width:500px class="form-control" placeholder="Email address *" required autofocus><br></center>
               <label for="inputPassword" class="sr-only">Password</label>
-              <center><input name="password" type="password" id="inputPassword" style= width:500px class="form-control" placeholder="Password *" required><br></center>
+              <center><input name="password" type="password" id="inputPassword" style= width:500px class="form-control" placeholder="Password *" required pattern=".{8,}" title="Must contain 8 or more characters"></center>
+              <center><p>Must contain 8 or more characters</p></center>
               <label for="inputCPassword" class="sr-only">Confirm Password</label>
               <center><input name="confirmpassword" type="password" id="inputCPassword" style= width:500px class="form-control" placeholder="Confirm Password *" required><br></center>
               <label for="inputPostalCode" class="sr-only">Postal Code</label>
               <center><input name="postalcode" type="number" id="inputPostalcode" style= width:500px class="form-control" placeholder="Postal Code *" required><br></center>
               <label for="inputLink" class="sr-only">Your Website or Social link</label>
-              <center><input name="link" type="text" id="inputLink" style= width:500px class="form-control" placeholder="Your website or social media Link *" required><br></center>
+              <center><input name="link" type="text" id="inputLink" style= width:500px class="form-control" placeholder="Your website or social media Link *" required></center>
+              <div class="textstyle">To keep our growing community filled with professional people please<br>show us that you work with artists or are in a creative business industry</div><br>
               <label for="inputInfo" class="sr-only">Information</label>
               <center><input name="info" type="text" id="inputLink" style= width:500px class="form-control" placeholder="How did you hear about us?"><br></center>
-              <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
-
-                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy <br>
-              <br><center><button name="signup" class="btn btn-lg btn-primary btn-block" style= width:500px type="submit">Sign up</button></center><br>
+            
+               <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the <a href="terms and conditions.html">Terms and Conditions</a> and <a href="Community Guidlines.html">Community Guidelines</a> <br>
+                <br><center><button name="signup" class="btn btn-lg btn-primary btn-block" style= width:500px type="submit" value="submit" onclick="return Validate()" >Sign up</button></center><br>
               <a href="login.php" class="mt-5 mb-3 text-muted" >Go back to login page</a><br><br>
             </form>
           </div>
           <p>Embrace Freebies! For a limited time, ALL Embrace Creatives members receive upgraded benefits for FREE!</p>
 
+          <script type="text/javascript">
+            function Validate() {
+                var password = document.getElementById("inputPassword").value;
+                var confirmPassword = document.getElementById("inputCPassword").value;
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
           <!-- Footer Start -->
 <div class="footer">
   <div class="contain">
