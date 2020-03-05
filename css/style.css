@@ -1,8 +1,12 @@
-h3.bold {
+h3.bold,h4.bold,h5.bold {
   font-weight: bold;
 }
 
 h5.subtitle {
+  color: dimgrey;
+}
+
+h6.subtitle {
   color: dimgrey;
 }
 
@@ -11,6 +15,14 @@ h4.card-title {
   color: 
 black;
 }
+
+ul {
+  list-style-type: none;
+  font-size: large;
+  ;
+}
+
+
 
 .art-call-link{
   color: #000;

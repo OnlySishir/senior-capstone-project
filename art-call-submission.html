@@ -7,11 +7,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -78,43 +82,172 @@
     <div class="row justify-content-md-center">
       <h3 class="bold">Submit an Art Call</h3>
     </div>
+    <br>
+    <div class="row justify-content-md-center">
+      <h4 class="bold">Art Call uploads are FREE!</h4>
+    </div>
+    <div class="row justify-content-md-center">
+      <h5>After approval your opportunity will be listed until its deadline date.</h5>
+    </div>
+    <br>
+    <div class="row justify-content-md-center">
+      <h4 class="bold">Submission rules and recommendations:</h4>
+    </div>
+    <div class="col">
+      <div class="row justify-content-md-center">
+        <h6>Each opportunity will stay up until its deadline date.</h5>
+      </div>
+      <div class="row justify-content-md-center">
+        <h6>Check your spelling before you submit.</h5>
+      </div>
+      <div class="row justify-content-md-center">
+        <h6>Once approved, calls are no longer editable.</h5>
+      </div>
+      <div class="row justify-content-md-center">
+        <h6>Make sure that your web link works.</h5>
+      </div>
+      <div class="row justify-content-md-center">
+        <h6>Best image size is approx. 850 w × 350 h pixels.</h5>
+      </div>
+      <div class="row justify-content-md-center">
+        <h6>Embrace Creatives, LLC has the right to refuse any application for any reason.</h5>
+      </div>
+    </div>
   </div>
+  <br>
   <hr width="90%" color="black">
+  <br>
   <!-- Art Calls Submission Header End -->
-  <br>
-  <br>
   <!-- Art Calls Submission Form Start -->
-  <form action="/action_page.php">
+  <form action="">
+    <div class="row justify-content-md-center">
+    <div class = "col-8">
     <div class="form-group">
-      <label for="event-name">Event Name:</label>
-      <input type="event-name" class="form-control" placeholder="Enter Event Name" id="event-name">
-    </div>
-    <div class="form-group">
-      <label for="category">Category:</label>
-      <input type="category" class="form-control" placeholder="Enter Category Name" id="cat-name">
-    </div>
-    <div class="form-group">
-      <label for="city">City:</label>
-      <input type="city" class="form-control" placeholder="Enter City" id="city-name">
+      <label for="country">Country:</label>
+      <input type="country" class="form-control" placeholder="Enter Country Name" id="country-name">
     </div>
     <div class="form-group">
       <label for="state">State:</label>
       <input type="state" class="form-control" placeholder="Enter State Name" id="state-name">
     </div>
     <div class="form-group">
-      <label for="country">Country:</label>
-      <input type="country" class="form-control" placeholder="Enter Country Name" id="country-name">
+      <label for="city">City:</label>
+      <input type="city" class="form-control" placeholder="Enter City Name" id="city-name">
+    </div>
+    <div class="form-group">
+      <label for="type-of-call">Type of call:</label>
+      <select class="custom-select">
+        <option selected>--Select--</option>
+        <option value="1">Confrence</option>
+        <option value="2">Contest</option>
+        <option value="3">Exhibition</option>
+        <option value="4">Fair or Festival</option>
+        <option value="5">Fellowship</option>
+        <option value="6">Gallery Representation</option>
+        <option value="7">General Opportunity</option>
+        <option value="8">Online-only</option>
+        <option value="9">Open Studio Event</option>
+        <option value="10">Public Art/RFP</option>
+        <option value="11">Fair or Festival</option>
+        <option value="12">Fellowship</option>
+        <option value="13">Gallery Representation</option>
+        <option value="14">General Opportunity</option>
+        <option value="15">Online-only</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="open-to">Open To:</label>
-      <input type="open-to" class="form-control" placeholder="Who is this art call open to?" id="open-to-name">
+      <select class="custom-select">
+        <option selected>--Select--</option>
+        <option value="1">International</option>
+        <option value="2">National</option>
+        <option value="3">Statewide</option>
+        <option value="4">Multi-State</option>
+      </select>
+    </div>
+    <!-- Medium/Industry-->
+    <div class="form-group">
+      <label for="open-to">Medium/Industry:</label>
     </div>
     <div class="form-group">
-      <label for="deadline">Application Deadline:</label>
-      <input type="deadline" class="form-control" placeholder="Enter Deadline" id="deadline">
+      <label for="event-name">Event Title:</label>
+      <input type="event-name" class="form-control" placeholder="Enter Event Title" id="event-name">
     </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+      </div>
+    <div class="form-group">
+      <label for="deadline">Application Deadline:</label>
+        <input id="deadline" width="276" />
+          <script>
+           $('#deadline').datepicker({
+            uiLibrary: 'bootstrap4'
+            });
+          </script>    
+    </div>
+    <div class="form-group">
+      <label for="fee">Fee:</label>
+      <input type="fee" class="form-control" placeholder="Enter the fee" id="fee">
+    </div>
+    <div class="form-group">
+      <label for="eligibility">Eligibility:</label>
+      <input type="eligibility" class="form-control" placeholder="Enter eligibility" id="eligibility">
+    </div>
+    <div class="form-group">
+      <label for="event-start">Event Start Date:</label>
+      <input id="event-start" width="276" />
+      <script>
+        $('#event-start').datepicker({
+          uiLibrary: 'bootstrap4'
+        });
+      </script>
+    </div>
+    <div class="form-group">
+      <label for="event-end">Event End Date:</label>
+      <input id="event-end" width="276" />
+      <script>
+        $('#event-end').datepicker({
+          uiLibrary: 'bootstrap4'
+        });
+      </script>
+    </div>
+    <div class="form-group">
+      <label for="deadline">Awards:</label>
+        <textarea class="form-control rounded-0" id="awards" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="website">Website:</label>
+      <input type="website" class="form-control" placeholder="Enter Deadline" id="website">
+    </div>
+    <div class="form-group">
+      <label for="how-to-apply">How to apply:</label>
+      <textarea class="form-control rounded-0" id="how-to-apply" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="how-to-apply">Add Image: </label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Choose image</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="listing-options">Listing Options:</label>
+        <select class="custom-select">
+          <option selected>--Select--</option>
+          <option value="1">Basic Post (free)</option>
+          <option value="2">Highlight on listing page (14 days) $40</option>
+          <option value="3">Highlight in EC Newsletter $30</option>
+          <option value="4">Featured on landing page (14 days) $75</option>
+          <option value="4">Featured in EC Newsletter $50</option>
+        </select>    
+    </div>
+    <h7><i>No refunds</i></h7>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary" href="">Add To Cart</button>
+    </div>
+    </div>
   </form>
   <!-- Art Calls Submission Form End -->
   <br>
@@ -141,11 +274,80 @@
     </div>
   </div>
   <!-- Socials End -->
+  <br>
+  <br>
+<!-- Footer Start -->
+<div class="footer">
+  <div class="contain">
+    <div class="col">
+      <h1>ABOUT</h1>
+      <ul>
+        <li><a href="about.html" class="">About EC</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Become an Ambassador</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+        <li><a href="#" class="">Privacy Policy</a></li>
+        <li><a href="#" class="">Terms & Conditions</a></li>
+        <li><a href="#" class="">Community Guidelines</a></li>
+        <li><a href="#" class="">Report Abuse</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Education</h1>
+      <ul>
+        <li><a href="blog-home.html" class="">Blog</a></li>
+        <li><a href="#" class="">EC User Manual</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Inspiration</h1>
+      <ul>
+        <li><a href="#" class="">Art & Design Market</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Connections</h1>
+      <ul>
+        <li><a href="#" class="">Members</a></li>
+        <li><a href="#" class="">Events</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Opportunities</h1>
+      <ul>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
+        <li><a href="#" class="">Grants</a></li>
+        <li><a href="#" class="">Advertise</a>
+        <li>
+      </ul>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="copyright-footer">
+      <p class="copyright color-text-a">
+        &copy; Copyright
+        <span class="color-a"></span> 2020 Embrace Creatives, LLC all rights reserved. Embrace Creatives is a
+        women-owned business headquartered in metro Detroit.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
