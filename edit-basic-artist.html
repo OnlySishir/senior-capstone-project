@@ -1,0 +1,399 @@
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?= base_url('static/css/jquery.multiselect.css')?>" />
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Basic Artist/Designer Profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+  <h2>Basic Artist/Designer Profile</h2>
+  <br>
+  <br>
+
+
+  <!-- Text input-->
+<!-- Business Name -->
+<!-- 30 CHARACTERS MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Business Name </label>  
+  <div class="col-md-4">
+  <input id="BusinessName" name="BusinessName" class="form-control input-md" type="text">
+  </div>
+</div>
+
+<!-- Country -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Country<span class="required">*</span></label>
+  <div class="col-md-4">
+    <select id="type" name="countries" class="form-control" required="required">
+      <?php foreach($countries as $key => $value) { ?>
+        <option value="<?= $key ?>" title="<?= htmlspecialchars($value) ?>"><?= htmlspecialchars($value) ?></option>
+      <?php } ?>
+    </select>
+  </div>
+</div>
+
+<!-- State -->
+<!-- text box with 30 characters max. ONLY SHOWS UP WHEN USA COUNTRY IS SELECTED-->
+<!-- IF NON USA MAKE STATE A TEXT BOX-->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">State<span class="required">*</span></label>
+  <div class="col-md-4">
+    <select id="type" name="states" class="form-control" required="required">
+      <?php foreach ($states as $key => $value) { ?>
+	    <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+	  <?php } ?>
+    </select>
+  </div>
+</div>
+
+<!-- City -->
+<!-- text box with 30 characters max. ONLY SHOWS UP WHEN USA COUNTRY IS SELECTED -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">City <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="city" name="city" class="form-control input-md" required="required" type="text">    
+  </div>
+</div>
+
+<!-- About -->
+<!-- Up to 2500 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">About <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="about" name="about" class="form-control input-md" required="required" type="text">    
+  </div>
+</div>
+
+<!-- Primary Medium/Industry -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Primary Medium/Industry<span class="required">*</span></label>
+  <div class="col-md-4">
+    <select id="industry" name="industry" class="form-control" required="required">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Animation</option>
+      <option>Body/Beauty</option>
+      <option>Culinary</option>
+      <option>Design</option>
+      <option>Digital/Graphics</option>
+      <option>Fashion/Accessory/Jewelry</option>
+      <option>Fiber/Textiles</option>
+      <option>Fine Art</option>
+      <option>Fine Craft</option>
+      <option>Furniture/Lighting</option>
+      <option>Gifts/Pet/Toy</option>
+      <option>Illustration/Calligraphy</option>
+      <option>Music</option>
+      <option>Photography/Videography</option>
+      <option>Printmaking/Paper</option>
+      <option>Public Art/Installation</option>
+      <option>Sculpture</option>
+      <option>Words</option>
+    </select>
+  </div>
+</div>
+
+<!-- Experience Level -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Experience Level<span class="required">*</span></label>
+  <div class="col-md-4">
+    <select id="experience" name="experience" class="form-control" required="required">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Emerging</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+      <option>Master</option>
+    </select>
+  </div>
+</div>
+
+<!-- Secondary Medium/Industry -->
+<!-- GREY OUT FOR BASIC MEMBERS -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Secondary Medium/Industry</label>
+  <div class="col-md-4">
+    <select id="industry2" name="industry2" class="form-control">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Animation</option>
+      <option>Body/Beauty</option>
+      <option>Culinary</option>
+      <option>Design</option>
+      <option>Digital/Graphics</option>
+      <option>Fashion/Accessory/Jewelry</option>
+      <option>Fiber/Textiles</option>
+      <option>Fine Art</option>
+      <option>Fine Craft</option>
+      <option>Furniture/Lighting</option>
+      <option>Gifts/Pet/Toy</option>
+      <option>Illustration/Calligraphy</option>
+      <option>Music</option>
+      <option>Photography/Videography</option>
+      <option>Printmaking/Paper</option>
+      <option>Public Art/Installation</option>
+      <option>Sculpture</option>
+      <option>Words</option>
+    </select>
+  </div>
+</div>
+
+<!-- Commissions -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Commissions</label>
+  <div class="col-md-4">
+    <select id="commissioins" name="commissions" class="form-control">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+</div>
+
+<!-- About -->
+<!-- 2500 CHARACTER MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">About</label>  
+  <div class="col-md-4">
+  <input id="about" name="about" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+<!-- Exhibition/Shows -->
+<!-- 2500 CHARACTER MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Exhibition/Shows</label>  
+  <div class="col-md-4">
+  <input id="exhibition" name="exhibition" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+<!-- Education -->
+<!-- 500 CHARACTER MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Education</label>  
+  <div class="col-md-4">
+  <input id="education" name="education" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+<!-- Awards and Distinctions -->
+<!-- 500 CHARACTER MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Awards and Distinctions</label>  
+  <div class="col-md-4">
+  <input id="awards" name="awards" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+
+<!-- Associations and affiliations -->
+<!-- 500 CHARACTER MAX -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Associations and Affiliations</label>  
+  <div class="col-md-4">
+  <input id="association" name="association" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+<!-- Type of Artist/Designer I Want To Connect With -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Type of Artist/Designer I Want To Connect With</label>
+  <div class="col-md-4">
+    <select id="artistConnect" name="artistConnect" class="form-control">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Animation</option>
+      <option>Body/Beauty</option>
+      <option>Culinary</option>
+      <option>Design</option>
+      <option>Digital/Graphics</option>
+      <option>Fashion/Accessory/Jewelry</option>
+      <option>Fiber/Textiles</option>
+      <option>Fine Art</option>
+      <option>Fine Craft</option>
+      <option>Furniture/Lighting</option>
+      <option>Gifts/Pet/Toy</option>
+      <option>Illustration/Calligraphy</option>
+      <option>Music</option>
+      <option>Photography/Videography</option>
+      <option>Printmaking/Paper</option>
+      <option>Public Art/Installation</option>
+      <option>Sculpture</option>
+      <option>Words</option>
+    </select>
+    <p>What type of Artist do you want to meet? Choose so they can find you more easily!</p>
+  </div>
+</div>
+
+
+<!-- Type of Business/Trade I Want To Connect With -->
+<!-- GREY OUT FOR BASIC MEMBERS -->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Type of Business/Trade I Want To Connect With</label>
+  <div class="col-md-4">
+    <select id="businessConnect" name="businessConnect" class="form-control">
+      <option disabled selected value> -- select an option -- </option>
+      <option>Animation</option>
+      <option>Body/Beauty</option>
+      <option>Culinary</option>
+      <option>Design</option>
+      <option>Digital/Graphics</option>
+      <option>Fashion/Accessory/Jewelry</option>
+      <option>Fiber/Textiles</option>
+      <option>Fine Art</option>
+      <option>Fine Craft</option>
+      <option>Furniture/Lighting</option>
+      <option>Gifts/Pet/Toy</option>
+      <option>Illustration/Calligraphy</option>
+      <option>Music</option>
+      <option>Photography/Videography</option>
+      <option>Printmaking/Paper</option>
+      <option>Public Art/Installation</option>
+      <option>Sculpture</option>
+      <option>Words</option>
+    </select>
+    <p>Signal to Buyers and Businesses that you're looking for them. Upgrade your account</p>
+  </div>
+</div>
+
+
+
+<!-- Introduction Video -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Introduction Video</label>  
+  <div class="col-md-4">
+  <input id="introVid" name="introVid" class="form-control input-md" type="text">  
+  <p>Enter the web address for your video (http://www.example.com/)</p>  
+  </div>
+</div>
+
+
+<!-- Additional Information -->
+<!-- GREY OUT FOR BASIC MEMBERS -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Additional Information</label>  
+  <div class="col-md-4">
+  <input id="additional" name="additional" class="form-control input-md" type="text">  
+  <p>To showcase even MORE information about yourself and your art. Upgrade your account</p>  
+  </div>
+</div>
+
+
+<!-- Tags -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Tags</label>  
+  <div class="col-md-4">
+  <input id="tags" name="tags" class="form-control input-md" type="text">   
+  <p>Get more eyes on you with tags. Use the enter/return key to add 3-5 words max</p> 
+  </div>
+</div>
+
+<h3>Shop Policy</h3>
+<br>
+
+<!-- Return and Exchange Policy -->
+<!-- Up to 1500 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Return and Exchange Policy<span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="return" name="return" class="form-control input-md" required="required" type="text">    
+  </div>
+</div>
+
+<!-- Preferred Shipping Method -->
+<!-- Up to 50 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Preferred Shipping Method<span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="return" name="return" class="form-control input-md" required="required" type="text">    
+  </div>
+</div>
+
+<h3>Wholesale Terms</h3>
+<br>
+
+<!-- Opening Order Minimum -->
+<!-- Up to 50 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Opening Order Minimum</label>  
+  <div class="col-md-4">
+  <input id="orderMin" name="orderMin" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+<!-- Reorder Minimum -->
+<!-- Up to 50 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Reorder Minimum</label>  
+  <div class="col-md-4">
+  <input id="reOrderMin" name="reOrderMin" class="form-control input-md" type="text"> 
+  <p>Remember to specify either dollar ($) or number minimum per order</P>
+  <p>- $250 minimum opening order</p>
+  <p>- $150 minimum, reorder</p>
+  <p>- 50 pieces minimum, opening order</p>
+  <p>- 25 pieces minimum, reorder</p>
+  <p>- No minimums</p>   
+  </div>
+</div>
+
+<!-- Payment Terms -->
+<!-- CAN CHOOSE MORE THAN ONE-->
+<div class="form-group row">
+  <label class="col-md-2 control-label" for="type">Payment Terms</label>
+  <div class="col-md-4">
+    <select id="payment" name="multicheckbox[]" multiple="multiple" class="4colactive">
+      <option disabled selected value> -- select an option -- </option>
+      <option value="COD">COD (cash on delivery)</option>
+      <option value="proforma">Proforma (ship upon full payment)</option>
+      <option value="consignment">Consignment (only paid for sold merchandise)</option>
+      <option value="net15">Net15</option>
+      <option value="net30">Net30</option>
+      <option value="net90">Net90</option>
+      <option value="extend">Extended terms with prompt payment discount</option>
+    </select>
+  </div>
+</div>
+
+<!-- Return and Exchange Policy -->
+<!-- Up to 1500 characters max -->
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="title">Return and Exchange Policy</label>  
+  <div class="col-md-4">
+  <input id="return" name="return" class="form-control input-md" type="text">    
+  </div>
+</div>
+
+
+
+<!-- Save Changes-->
+<div class="form-group row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary btn-normal">Save Changes</button>    
+    </div>
+  </div> 
+  </form>
+</div>
+
+
+</div>
+</div>
+  
+  </body>
+</html>
+
+
+
