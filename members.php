@@ -90,50 +90,99 @@ a {
                 <div class="form-group pull-right">
 </div>
 <br><br>
+
+
 <div class="form-group col-md-3">
-        <select class="custom-select mr-sm-3" name="department" id="selectJob">
-        <option value="" selected="selected">All Members</option>
-        <option value="ARTIST/DESIGNER">Artist/Designer</option>
-        <option value="BUSINESS/TRADE">Business/Trade</option>
-        </select>
+  <select class="custom-select mr-sm-3" name="department" id="selectJob">
+    <option value="" selected="selected">All Members</option>
+    <option value="ARTIST/DESIGNER">Artist/Designer</option>
+    <option value="BUSINESS/TRADE">Business/Trade</option>
+  </select>
 </div>
 
                     <div class="table-responsive">
-                        <table class="table user-list" id="myTable">
-                        <input type='text' id='txt_searchall' placeholder='Enter search text' class="form-control">&nbsp; 
-<br/>
-                        <?php foreach($accounts as $key => $row){?>
-                            <!-- <tbody > -->
-                                <tr>
-                                    <td>
-                                        <img src="https://bootdey.com/img/Content/user_1.jpg" alt="">
-                                        <?php if ($row['businessname'] == NULL) { ?>
-                                        <strong><b><p class="paragraph"><?= $row['firstname']." ".$row['lastname'] ?></b></strong><br>
-                                        <?php } 
-                                        else { ?>
-                                        <strong><b><?= $row['businessname']?></b></strong><br>
-                                        <?php } ?>
-                                        
-                                        <small>Primary Medium/Industry</small><br>
-                                        
-                                        
-                                        <!-- < class="user-subhead">Member</p> -->
-                                        <span class="user-subhead">State</span> &nbsp; &nbsp; <span class="user-subhead">Country</span>
-                                        <a href="#" class="user-link">View Profile</a>
-                                        </p>
-                                        <p style="visibility: hidden;">
-                                        <?= $row['type']?>
-                                        </p>
-                                    </td>
+                      <input type='text' id='txt_searchall' placeholder='Enter search text' class="form-control"><br/>
+                      <table class="table user-list" id="myTable">
+                        <tbody>
+                          <tr><th class="table-header">Members</th></tr>
+                          <?php foreach($business_accounts as $key => $row){?>
+                            <tr>
+                              <td>
+                                  <?php if( empty($row['profile_img']) ):?>
+                                  <img src="<?= base_url('static/img/profile.png')?>" alt="">
+                                  <?php endif;?>
+                                  <?php if( !empty($row['profile_img']) ):?>
+                                  <img src="<?= base_url('upload/profile/').$row['profile_img']?>" alt="">
+                                  <?php endif;?>
+                                  <?php if ($row['business_name'] == NULL) { ?>
+                                  <p class="paragraph">
+                                    <strong><b><?= $row['firstname']." ".$row['lastname'] ?></b></strong><br>
+                                  <?php } 
+                                  else { ?>
+                                    <strong><b><?= $row['business_name']?></b></strong><br>
+                                  <?php } ?>
+                                  
+                                  <?php if ( !empty($row['industry_listing']) ) { ?>
+                                    <small><?= $row['industry_listing']?></small><br>
+                                  <?php } 
+                                  else { ?>
+                                  <?php } ?>
+                                  <?php if ( !empty($row['state']. $row['country'])) { ?>                                 
+                                  <small><?= $row['state']?> &nbsp;<span> <?= $row['country']?></span></small> 
+                                  <?php } 
+                                  else { ?>
+                                  <?php } ?>                                  
+                                    <a href="<?= base_url('profile').'?email='.$row['email']?>" class="user-link">View Profile</a>
+                                  </p>
+                                  <p style="visibility: hidden;">
+                                    <?= $row['type']?>
+                                  </p>
+                              </td>
+                            </tr>
+                          <?php } ?>   
 
-                                </tr>
-                        <?php } ?>
-                            <!-- </tbody> -->
-                        </table>
+                          <?php foreach($artist_accounts as $key => $row){?>
+                            <tr>
+                              <td>
+                                  <?php if( empty($row['profile_img']) ):?>
+                                  <img src="<?= base_url('static/img/profile.png')?>" alt="">
+                                  <?php endif;?>
+                                  <?php if( !empty($row['profile_img']) ):?>
+                                  <img src="<?= base_url('upload/profile/').$row['profile_img']?>" alt="">
+                                  <?php endif;?>
+                                 
+                                  <?php if ($row['business_name'] == NULL) { ?>
+                                  <p class="paragraph">
+                                    <strong><b><?= $row['firstname']." ".$row['lastname'] ?></b></strong><br>
+                                  <?php } 
+                                  else { ?>
+                                    <strong><b><?= $row['business_name']?></b></strong><br>
+                                  <?php } ?>
+                                  
+                                  <?php if ( !empty($row['medium_industry']) ) { ?>
+                                    <small><?= $row['medium_industry']?></small><br>
+                                  <?php } 
+                                  else { ?>
+                                  <?php } ?>
+                                  <?php if ( !empty($row['state']. $row['country'])) { ?>                                 
+                                  <small><?= $row['state']?> &nbsp;<span> <?= $row['country']?></span></small> 
+                                  <?php } 
+                                  else { ?>
+                                  <?php } ?> 
+                                  
+                                    <a href="<?= base_url('profile').'?email='.$row['email']?>" class="user-link">View Profile</a>
+                                  </p>
+                                  <p style="visibility: hidden;">
+                                    <?= $row['type']?>
+                                  </p>
+                              </td>
+                            </tr>
+                          <?php } ?>
+                        </tbody>
+                      </table>
                     </div>
-                </div>
-                <div class="pagination">
-</div>
+                  </div>
+                <div class="pagination"></div>
             </div>
         </div>
     </div>
@@ -231,7 +280,7 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 </script>
 
 <script>
-    function filterDepartment() {
+function filterDepartment() {
     var table = document.getElementById("myTable"),
     tr = table.getElementsByTagName("tr"),
     selected = this.value;
@@ -247,3 +296,4 @@ window.onload=function() { // or addEventListener/attachEvent
   
 }
 </script>
+
