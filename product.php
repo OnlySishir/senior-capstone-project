@@ -29,9 +29,13 @@ hr.new4 {
 						</li>
 					  <?php foreach($sndIMG as $key => $row){?>
 						  <li>
+						  <?php if ($single['pro_other_img'] != NULL ) { ?>
 						  	<a data-target="#pic-<?= $key+1?>" data-toggle="tab">
 						  		<img src="<?= base_url('upload/').$row?>" height="90" width="auto" />
 						  	</a>
+						  <?php } else {?>
+						  
+						  <?php } ?>
 						  </li>
 					  <?php } ?>
 					</ul>
@@ -96,6 +100,13 @@ hr.new4 {
 			</div>
 			<br />
 			<br />
+			
+			<?php if ($single['pro_quantity_stock'] == 0) { ?>
+
+				<input class="btn btn-info btn-normal" type="button" value="Add to Cart" disabled />
+
+			<?php }
+			else { ?>
 
 				<?php  $price = $this->session->certified =='ok' ? $single["pro_wholesale"] : $single["pro_retail"]; ?> 
 						<a href="#" class="btn btn-info btn-normal" onclick="add_cart_func(<?= $single['id']?>, 
@@ -105,6 +116,7 @@ hr.new4 {
 						<input type="hidden" name="real-price<?= $single['id']?>" value="<?= $single["pro_retail"]?>">
 						
 					<?php } 
+                	}
 					
 					 else { ?>
 					 <br>
@@ -127,6 +139,12 @@ hr.new4 {
 			</span>
 			<br />
 			<br />
+						<?php if ($single['pro_quantity_stock'] == 0) { ?>
+
+				<input class="btn btn-info btn-normal" type="button" value="Add to Cart" disabled />
+
+			<?php }
+			else { ?>
 
 					<h5>
 						<?php $price = $this->session->certified=='ok' ? $single["pro_wholesale"] : $single["pro_retail"]; ?>
@@ -138,7 +156,8 @@ hr.new4 {
 						<input type="hidden" name="real-price<?= $single['id']?>" value="<?= $single["pro_retail"]?>">
 						
 					</h5>
-					<?php } ?>
+					<?php }
+					}?>
 				</div>
 			</div>
 		</div>
