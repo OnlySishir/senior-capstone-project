@@ -78,8 +78,10 @@ else { ?>
     } 
      
     ?>
-    </table>  
+    </table>&nbsp;&nbsp;
+    <div class="text2" style="text-align: left;">  
 <div class="pagination">
+</div>
 </div>
 <br>
 
