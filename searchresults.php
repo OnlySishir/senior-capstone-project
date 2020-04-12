@@ -1,4 +1,10 @@
+<script src="<?= base_url('static/js/jquery.simplePagination.js')?>"></script>
+<link rel="stylesheet" type="text/css" href="<?= base_url('static/css/simplePagination.css')?>">
+
+
 <?php header('Cache-Control: no cache'); ?>
+
+
 
 <br>
 <table>
@@ -12,12 +18,12 @@
 else { ?>
  <h2> Search Results </h2>
 <br>
-<table class="table">
 
 
-<?php    foreach($results as $row){ 
 
-        if($row->type == 'grant'){ ?>
+<?php foreach($results as $row){ ?>
+<table class = "table">
+    <?php if($row->type == 'grant'){ ?>
 
                 <!-- grants search results -->
 
@@ -67,13 +73,35 @@ else { ?>
                 </tr>
 
         <?php }
-        
-
-         } 
-     }
+     
+      } 
+    } 
      
     ?>
-
-</table>
-
+    </table>  
+<div class="pagination">
+</div>
 <br>
+
+<script>
+
+$( document ).ready(function() {	
+	var items = $("table tr");
+	var numItems = items.length;
+	var perPage = 5;
+	items.slice(perPage).hide();
+	if(numItems != 0){
+		$(".pagination").pagination({
+			items: numItems,
+			itemsOnPage: perPage,
+			cssStyle: "light-theme",
+			onPageClick: function(pageNumber) { 
+				var showFrom = perPage * (pageNumber - 1);
+				var showTo = showFrom + perPage;
+				items.hide().slice(showFrom, showTo).show();
+			}
+		});
+	}
+});
+
+</script>
