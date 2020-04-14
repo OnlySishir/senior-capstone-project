@@ -17,7 +17,7 @@
 <!-- 30 CHARACTERS MAX -->
 <input type="hidden" name="fType" value="artist">
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Business Name </label>  
+  <label class="col-sm-3 col-form-label" for="title">Business Name: </label>  
   <div class="col-md-8">
     <input id="BusinessName" name="BusinessName" class="form-control input-md" type="text" value="<?= $profile['business_name']?>">
   </div>
@@ -25,7 +25,7 @@
 
 <!-- Country -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Country<span class="required">*</span></label>
+  <label class="col-md-3 control-label" for="type">Country:<span class="required">*</span></label>
   <div class="col-md-8">
     <select id="type" name="countries" class="form-control" required>
       <?php foreach(config_item('country_list') as $key => $value) { ?>
@@ -39,7 +39,7 @@
 <!-- text box with 30 characters max. ONLY SHOWS UP WHEN USA COUNTRY IS SELECTED-->
 <!-- IF NON USA MAKE STATE A TEXT BOX-->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">State<span class="required">*</span></label>
+  <label class="col-md-3 control-label" for="type">State:<span class="required">*</span></label>
   <div class="col-md-8">
     <input type="text" name="state" class="form-control input-md" required value="<?= $profile['state']?>">    
   </div>
@@ -48,7 +48,7 @@
 <!-- City -->
 <!-- text box with 30 characters max. ONLY SHOWS UP WHEN USA COUNTRY IS SELECTED -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">City <span class="required">*</span></label>  
+  <label class="col-sm-3 col-form-label" for="title">City: <span class="required">*</span></label>  
   <div class="col-md-8">
   <input id="city" name="city" class="form-control input-md" required="required" type="text" value="<?= $profile['city']?>">    
   </div>
@@ -57,7 +57,7 @@
 <!-- About -->
 <!-- Up to 2500 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">About <span class="required">*</span></label>  
+  <label class="col-sm-3 col-form-label" for="title">About: <span class="required">*</span></label>  
   <div class="col-md-8">
     <input id="about" name="about" class="form-control input-md" required="required" type="text" value="<?= $profile['about']?>">    
   </div>
@@ -65,7 +65,7 @@
 
 <!-- Primary Medium/Industry -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Primary Medium/Industry<span class="required">*</span></label>
+  <label class="col-md-3 control-label" for="type">Primary Medium/Industry:<span class="required">*</span></label>
   <div class="col-md-8">
     <select id="industry" name="medium_industry" class="form-control" required="required">
       <option disabled selected value> -- select an option -- </option>
@@ -93,7 +93,7 @@
 
 <!-- Experience Level -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Experience Level<span class="required">*</span></label>
+  <label class="col-md-3 control-label" for="type">Experience Level:<span class="required">*</span></label>
   <div class="col-md-8">
     <select id="experience" name="experience_level" class="form-control" required="required">
       <option disabled selected value> -- select an option -- </option>
@@ -108,7 +108,7 @@
 <!-- Secondary Medium/Industry -->
 <!-- GREY OUT FOR BASIC MEMBERS -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Secondary Medium/Industry</label>
+  <label class="col-md-3 control-label" for="type">Secondary Medium/Industry:</label>
   <div class="col-md-8">
     <select id="industry2" name="secondary_medium" class="form-control">
       <option disabled selected value> -- select an option -- </option>
@@ -136,7 +136,7 @@
 
 <!-- Commissions -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Commissions</label>
+  <label class="col-md-3 control-label" for="type">Commissions:</label>
   <div class="col-md-8">
     <select id="commissioins" name="commissions" class="form-control">
       <option disabled selected value> -- select an option -- </option>
@@ -149,7 +149,7 @@
 <!-- Exhibition/Shows -->
 <!-- 2500 CHARACTER MAX -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Exhibition/Shows</label>  
+  <label class="col-sm-3 col-form-label" for="title">Exhibition/Shows:</label>  
   <div class="col-md-8">
     <input id="exhibition" name="exhibition" class="form-control input-md" type="text" value="<?= $profile['exhibition']?>">    
   </div>
@@ -158,7 +158,7 @@
 <!-- Education -->
 <!-- 500 CHARACTER MAX -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Education</label>  
+  <label class="col-sm-3 col-form-label" for="title">Education:</label>  
   <div class="col-md-8">
     <input id="education" name="education" class="form-control input-md" type="text" value="<?= $profile['education']?>">    
   </div>
@@ -167,7 +167,7 @@
 <!-- Awards and Distinctions -->
 <!-- 500 CHARACTER MAX -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Awards and Distinctions</label>  
+  <label class="col-sm-3 col-form-label" for="title">Awards and Distinctions:</label>  
   <div class="col-md-8">
     <input id="awards" name="awards" class="form-control input-md" type="text" value="<?= $profile['awards']?>">    
   </div>
@@ -177,7 +177,7 @@
 <!-- Associations and affiliations -->
 <!-- 500 CHARACTER MAX -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Associations and Affiliations</label>  
+  <label class="col-sm-3 col-form-label" for="title">Associations and Affiliations:</label>  
   <div class="col-md-8">
     <input id="association" name="associations" class="form-control input-md" type="text" value="<?= $profile['associations']?>">    
   </div>
@@ -185,7 +185,7 @@
 
 <!-- Type of Artist/Designer I Want To Connect With -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Type of Artist/Designer I Want To Connect With</label>
+  <label class="col-md-3 control-label" for="type">Type of Artist/Designer I Want To Connect With:</label>
   <div class="col-md-8">
     <select id="artistConnect" name="type_artist_with" class="form-control">
       <option disabled selected value> -- select an option -- </option>
@@ -216,7 +216,7 @@
 <!-- Type of Business/Trade I Want To Connect With -->
 <!-- GREY OUT FOR BASIC MEMBERS -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Type of Business/Trade I Want To Connect With</label>
+  <label class="col-md-3 control-label" for="type">Type of Business/Trade I Want To Connect With:</label>
   <div class="col-md-8">
     <select id="businessConnect" name="type_business_with" class="form-control">
       <option disabled selected value> -- select an option -- </option>
@@ -247,7 +247,7 @@
 
 <!-- Introduction Video -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Introduction Video</label>  
+  <label class="col-sm-3 col-form-label" for="title">Introduction Video:</label>  
   <div class="col-md-8">
     <input id="introVid" name="intro_video" class="form-control input-md" type="text" value="<?= $profile['intro_video']?>">  
     <p>Enter the web address for your video (http://www.example.com/)</p>  
@@ -258,7 +258,7 @@
 <!-- Additional Information -->
 <!-- GREY OUT FOR BASIC MEMBERS -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Additional Information</label>  
+  <label class="col-sm-3 col-form-label" for="title">Additional Information:</label>  
   <div class="col-md-8">
     <input id="additional" name="addtional_info" class="form-control input-md" type="text" value="<?= $profile['addtional_info']?>">  
     <p>To showcase even MORE information about yourself and your art. Upgrade your account</p>  
@@ -268,7 +268,7 @@
 
 <!-- Tags -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Tags</label>  
+  <label class="col-sm-3 col-form-label" for="title">Tags:</label>  
   <div class="col-md-8">
     <input id="tags" name="tags" class="form-control input-md" type="text" value="<?= $profile['tags']?>">   
     <p>Get more eyes on you with tags. Use the enter/return key to add 3-5 words max</p> 
@@ -281,7 +281,7 @@
 <!-- Return and Exchange Policy -->
 <!-- Up to 1500 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Return and Exchange Policy<span class="required">*</span></label>  
+  <label class="col-sm-3 col-form-label" for="title">Return and Exchange Policy:<span class="required">*</span></label>  
   <div class="col-md-8">
     <input id="return" name="return_policy" class="form-control input-md" required="required" type="text" value="<?= $profile['return_policy']?>">    
   </div>
@@ -290,7 +290,7 @@
 <!-- Preferred Shipping Method -->
 <!-- Up to 50 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Preferred Shipping Method<span class="required">*</span></label>  
+  <label class="col-sm-3 col-form-label" for="title">Preferred Shipping Method:<span class="required">*</span></label>  
   <div class="col-md-8">
     <input id="return" name="prefered_shipping_method" class="form-control input-md" required type="text" value="<?= $profile['prefered_shipping_method']?>">
   </div>
@@ -302,7 +302,7 @@
 <!-- Opening Order Minimum -->
 <!-- Up to 50 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Opening Order Minimum</label>  
+  <label class="col-sm-3 col-form-label" for="title">Opening Order Minimum:</label>  
   <div class="col-md-8">
     <input id="orderMin" name="opening_order_min" class="form-control input-md" type="text" value="<?= $profile['opening_order_min']?>">    
   </div>
@@ -311,7 +311,7 @@
 <!-- Reorder Minimum -->
 <!-- Up to 50 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Reorder Minimum</label>  
+  <label class="col-sm-3 col-form-label" for="title">Reorder Minimum:</label>  
   <div class="col-md-8">
   <input id="reOrderMin" name="reorder_min" class="form-control input-md" type="text" value="<?= $profile['reorder_min']?>"> 
   <p>Remember to specify either dollar ($) or number minimum per order</P>
@@ -326,7 +326,7 @@
 <!-- Payment Terms -->
 <!-- CAN CHOOSE MORE THAN ONE-->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-md-3 control-label" for="type">Payment Terms</label>
+  <label class="col-md-3 control-label" for="type">Payment Terms:</label>
   <div class="col-md-8">
     <select id="payment" name="payment_terms[]" multiple="multiple" class="col-md-12">
       <option disabled selected value> -- select an option -- </option>
@@ -344,7 +344,7 @@
 <!-- Return and Exchange Policy -->
 <!-- Up to 1500 characters max -->
 <div class="form-group col-md-6 offset-md-3">
-  <label class="col-sm-3 col-form-label" for="title">Return and Exchange Policy</label>  
+  <label class="col-sm-3 col-form-label" for="title">Return and Exchange Policy:</label>  
   <div class="col-md-8">
     <input id="return" name="return_exchange_policy" class="form-control input-md" type="text" value="<?= $profile['return_exchange_policy']?>">    
   </div>
