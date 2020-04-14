@@ -18,7 +18,7 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid2">
                 <div class="product-image2">
-                    <a href="<?= base_url('product/individual/').$row['id']?>">
+                    <a href="<?= base_url('product/view_product/').$row['id']?>">
                         <img class="pic-1" src="<?= base_url('upload/').$row['pro_main_img']?>" style="height: 255px">
                         <?php $sndIMG = explode(",", $row['pro_other_img'])[0]; ?>
                         <?php if( isset($sndIMG) && ($sndIMG!="") ){?>
@@ -28,19 +28,23 @@
                     <a class="add-to-cart" href="<?= base_url('starter/login')?>">Add to cart</a>
                     <input type="hidden" name="real-price<?= $row['id']?>" value="<?= $row["pro_retail"]?>">
                 </div>
-                <div class="product-content" style="background-color: #f2f2f2; text-align: center;">
-                    <h3 class="title"><a href="<?= base_url('product/individual/').$row['id']?>"><?= $row['pro_title']?></a></h3>
+                <div class="product-content" style="background-color: #f2f2f2; text-align: left;">
+                    <h3 class="title"><a href="<?= base_url('product/view_product/').$row['id']?>"><?= $row['pro_title']?></a></h3>
+
+                    
+                    <span class="text-info" style="font-size:14px;" >By: <span class="info"><?= $row['firstname'].' '.$row['lastname']?></span></span><br>
+                    <span class="text-dark" style="font-size:15px;">Industry,Type: <span class="info"><?= $row['category_sort'].' , '.$row['category_name']?></span></span><br>
+                    <span class="text-dark" style="font-size:15px;">Size: <span class="info"><?= $row['pro_size']?></span></span><br>
+                    <p><span class="text-dark" style="font-size:15px;">Industry: <span class="info"><?= $row['category_sort']?></span></span></p>                 
+
                     <?php { ?>
 
-                        <span class="price">$ <?= $row['pro_retail']?></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <!--<span class="price notable-price" data-toggle="tooltip" title="To purchase this wholesale price, You have to upgrade your membership">$ <?= $row['pro_wholesale']?></span><br>-->
-                        <span class="fa fa-lock" data-toggle="tooltip" title="To purchase wholesale, you have to provide a reseller certificate or other appropriate proof. " aria-hidden="true"></span>
+                    <span class="price">$ <?= $row['pro_retail']?></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    <!--<span class="price notable-price" data-toggle="tooltip" title="To purchase this wholesale price, You have to upgrade your membership">$ <?= $row['pro_wholesale']?></span><br>-->
+                    <span class="fa fa-lock" data-toggle="tooltip" title="To purchase wholesale, you have to provide a reseller certificate or other appropriate proof. " aria-hidden="true"></span>
                     <?php } ?>
-
-                    <h6 class="name"><?= $row['firstname'].' '.$row['lastname']?></h6>
-                    <span class="type"><?= $row['category_sort'].' '.$row['category_name']?></span><br>
-                    <span class="size"><?= $row['pro_size']?></span><br>
                 </div>
+                <br>
             </div>
         </div>
     <?php } ?>
