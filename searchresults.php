@@ -59,15 +59,23 @@ else { ?>
                 <!-- if user is logged in then go to invidual product page or else go to view single product page. -->
                     <?php if ($this->session->userdata('is_user')) { ?>
 
-                  <td><h2>&nbsp;&nbsp;&nbsp;<a href="<?= base_url('product/individual/').$row->id?>"><?php echo $row->title?></h2></a><br>
+                  <td><h2><a href="<?= base_url('product/individual/').$row->id?>"><?php echo $row->title?></h2></a><br>
                 <?php } else { ?>
 
-                    <td><h2>&nbsp;&nbsp;&nbsp;<a href="<?= base_url('product/view_product/').$row->id?>"><?php echo $row->title?></h2></a><br>
+                    <td><h2><a href="<?= base_url('product/view_product/').$row->id?>"><?php echo $row->title?></h2></a><br>
 
                   <?php } ?>
+                <div class="item mb-5">
+                    <div class="media">
+                        <img class="mr-3 img-fluid post-thumb d-none d-md-flex"
+                            src="<?= base_url('upload/').$row->image?>" width="150" height="200" alt="image">
+                        <div class="media-body">
                   <div class="text2" style="text-align: left;">
                   <p><?=  substr(strip_tags($row->summary), 0, 200).'...';?></p>
+                  <?php if ($this->session->userdata('is_user')) { ?>
                   <a class="more-link" href="<?=  base_url()?>product/individual/<?=$row->id?>">Read more &rarr;</a>
+                  <? } else ?><a class="more-link" href="<?=  base_url()?>product/view_product/<?=$row->id?>">Read more &rarr;</a>                  
+                  </div>
                   </div>
                 </td>
                 </tr>
