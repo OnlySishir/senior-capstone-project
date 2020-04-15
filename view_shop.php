@@ -40,8 +40,11 @@
                     <?php { ?>
 
                     <span class="price">$ <?= $row['pro_retail']?></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-                    <!--<span class="price notable-price" data-toggle="tooltip" title="To purchase this wholesale price, You have to upgrade your membership">$ <?= $row['pro_wholesale']?></span><br>-->
-                    <span class="fa fa-lock" data-toggle="tooltip" title="To purchase wholesale, you have to provide a reseller certificate or other appropriate proof. " aria-hidden="true"></span>
+                        <?php if (($row['pro_wholesale'] != NULL) and ($row['pro_wholesale'] != 0)) { ?>
+                        <!--<span class="price notable-price" data-toggle="tooltip" title="To purchase this wholesale price, You have to upgrade your membership">$ <?= $row['pro_wholesale']?></span><br>-->
+                        <span class="fa fa-lock" data-toggle="tooltip" title="To purchase wholesale, you have to provide a reseller certificate or other appropriate proof. " aria-hidden="true"></span>
+                        <?php } else { ?>
+                        <?php } ?>
                     <?php } ?>
                 </div>
                 <br>
