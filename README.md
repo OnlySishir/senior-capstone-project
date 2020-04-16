@@ -27,5 +27,20 @@ Bootstrap 4
 PHP
 MySql
 
+# Team Breakdown
 
->> Version 1.0
+Team Lead: Abdul Khan
+
+TA: Ahmed Bani Amer
+
+Professor: Seyed Ziae Mousavi Mojab
+
+Team Members: 
+
+Kashyap Kandikonda, Documentation / Back-end lead
+
+Sishir Buddharaju, UI / Front-end lead
+
+Nadia Chowdhury, QA / Presentation lead
+
+>> Version 1.1
