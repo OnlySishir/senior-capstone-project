@@ -8,7 +8,7 @@ The Embrace Creatives development team is devoted to creating a dynamic website 
 
 Currently our client is operating their business on wordpress, and sought to transition to having their own site. The client required a platform for two different types of users, artist and businesses, along with options to become paid members.
 
-Our solution included creating a new site using html, css, python, bootstrap 4, and a sql server to handle the database requirements. We migrated all of the clients existing users to a new database, created a shop page for artists to sell retail and whole sale, a page for events to be advertised, a page for grants to be advertised, and a platform for business users to contact and purchase specific pieces from artists directly at bulk quantities.
+Our solution included creating a new site using html, css, bootstrap 4, and a sql server to handle the database requirements. We migrated all of the clients existing users to a new database, created a shop page for artists to sell retail and whole sale, a page for events to be advertised, a page for grants to be advertised, and a platform for business users to contact and purchase specific pieces from artists directly at bulk quantities.
 
 # Scope
 The central goal of this website is to create a platform for artists to sell retail and for businesses to find artists to buy wholesale.
