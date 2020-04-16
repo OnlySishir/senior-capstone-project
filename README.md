@@ -10,15 +10,16 @@ Currently our client is operating their business on wordpress, and sought to tra
 
 Our solution included creating a new site using html, css, bootstrap 4, and a sql server to handle the database requirements.
 <ul>
-  <li>All of the existing users is migrated from Wordpress with hashed passwords to a new database to have access to the  new Embrace Creatives website.</li>
-  <li>A product adding feature that lets an artist to add their artwork/product at a retail or wholesale price based on the membership. </li>
-  <li> A shopping function for all the users to buy products that are added by the artists with an additional opprtunity for the certified business users to buy wholesale products.  
-   <li>Search function for users to quickly find what they are looking for. 
-   <li>A grant feature for business users to support and fund artists by adding different types of opportunities. 
-   <li>An art call feature for business users to showcase different types of art call opprtunities for the artists to sell their best artworks. </li>
-    <li> A blog feature for authors and admin to express their thoughts and opinions. 
-    <li> Profile editing function is available for the registered users in the website. This function is implemented for the users to take advantage of including addtional information to let other others know more about themselves.</li>
-  <li> Admin has the privilage of accepting newly registered users. </li>
+  <li>All of the existing users migrated from Wordpress with hashed passwords to a new database to have access to the new Embrace Creatives website.</li>
+  <li>A product adding feature that lets an artist add their artwork/product at a retail or wholesale price based on the membership.
+</li>
+  <li> A shopping function for all the users to buy products that are added by the artists with an additional opportunity for the certified business users to buy wholesale products.</li>
+  <li>Search function for users to quickly find what they are looking for.</li>
+   <li>A grant feature for business users to support and fund artists by adding different types of opportunities.</li> 
+   <li>An art call feature for business users to showcase different types of art call opportunities for the artists to sell their best artworks.</li>
+  <li> A blog feature for authors and admin to express their thoughts and opinions.</li>
+    <li> Profile editing function is available for the registered users in the website. This function is implemented for the users to take advantage of including additional information to let other others know more about themselves.</li>
+  <li> Admin has the privilege of accepting newly registered users.</li>
   <li> Admin can edit/delete existing users. </li>
   <li> Admin can edit/delete uploaded grants,uploaded artcalls,posted blogs. </li>
   </ul>
@@ -56,4 +57,4 @@ Sishir Buddharaju, UI / Front-end lead
 
 Nadia Chowdhury, QA / Presentation lead
 
->> Version 1.1
+>> Version 1.2
