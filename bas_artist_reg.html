@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EC signup page</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+<style>
+      .textstyle{
+        padding-left: 420px;
+        padding-right: 40px;
+        text-align: justify;
+    }
+
+</style>
+  </head>
+    	
+<body class="text-center">
+     <!-- Nav Bar Start -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <a class="navbar-brand" href="index.html">
+        <img src="./img/EC_logo-Black.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample03"
+        aria-controls="navbarsExample03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" />
+        </form>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown03"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Shop
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="#">Shop by Category</a>
+              <a class="dropdown-item" href="#">Shop by Artist</a>
+              <a class="dropdown-item" href="#">Shop by Location</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>          
+        </ul>
+      </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+
+    <form method="post" class="form-signin" onsubmit="if(document.getElementById('agree').checked) { return true; } else {alert('Please indicate that you have read and agree to the Terms and Conditions and Community Guidelines'); return false; }">
+              <h1 class="h3 mb-3 font-weight-normal"><b>Register</b></h1>
+            </div>
+            <h4 class="ex1"><b>Basic Artist/Designer</b></h4>
+              <div class="textstyle">You sell your art, product or service and/or have a career in an art or design <br> industry. You proudly say you are a fashion designer, mural artist, painter, sculptor,<br> graphic artist, jeweler, quilter, illustrator, toy designer, industrial designer,<br>videographer, model, etc...</div><br>
+              <div class="textstyle"><span class="required">*</span>Required field</div>
+              <div class="container"></div>
+              <label for="inputFirstname" class="sr-only">Firstname</label>
+              <center><input name="firstname" type="text" id="inputFirstname" style= width:500px class="form-control" placeholder="Firstname *" required autofocus></center><br>
+                <label for="inputLastname" class="sr-only">Lastname</label>
+                <center><input name="businessname" type="text" id="inputBusinessname" style= width:500px class="form-control" placeholder="Lastname *" required autofocus><br></center>
+                <label for="inputBusinessname" class="sr-only">Business Name</label>
+              <center><input name="lastname" type="text" id="inputLastname" style= width:500px class="form-control" placeholder="Business Name" ><br></center>
+                <label for="inputEmail" class="sr-only">Email address</label>
+              <center><input name="email" type="email" id="inputEmail" style= width:500px class="form-control" placeholder="Email address *" required autofocus><br></center>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <center><input name="password" type="password" id="inputPassword" style= width:500px class="form-control" placeholder="Password *" required pattern=".{8,}" title="Must contain 8 or more characters"></center>
+              <center><p>Must contain 8 or more characters</p></center>
+              <label for="inputCPassword" class="sr-only">Confirm Password</label>
+              <center><input name="confirmpassword" type="password" id="inputCPassword" style= width:500px class="form-control" placeholder="Confirm Password *" required><br></center>
+              <label for="inputPostalCode" class="sr-only">Postal Code</label>
+              <center><input name="postalcode" type="number" id="inputPostalcode" style= width:500px class="form-control" placeholder="Postal Code *" required><br></center>
+              <label for="inputLink" class="sr-only">Your Website or Social link</label>
+              <center><input name="link" type="text" id="inputLink" style= width:500px class="form-control" placeholder="Your website or social media Link *" required></center>
+              <div class="textstyle">To keep our growing community filled with professional people please<br>show us that you work with artists or are in a creative business industry</div><br>
+              <label for="inputInfo" class="sr-only">Information</label>
+              <center><input name="info" type="text" id="inputLink" style= width:500px class="form-control" placeholder="How did you hear about us?"><br></center>
+            
+               <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the <a href="terms and conditions.html">Terms and Conditions</a> and <a href="Community Guidlines.html">Community Guidelines</a> <br>
+                <br><center><button name="signup" class="btn btn-lg btn-primary btn-block" style= width:500px type="submit" value="submit" onclick="return Validate()" >Sign up</button></center><br>
+              <a href="login.php" class="mt-5 mb-3 text-muted" >Go back to login page</a><br><br>
+            </form>
+          </div>
+          <p>Embrace Freebies! For a limited time, ALL Embrace Creatives members receive upgraded benefits for FREE!</p>
+
+          <script type="text/javascript">
+            function Validate() {
+                var password = document.getElementById("inputPassword").value;
+                var confirmPassword = document.getElementById("inputCPassword").value;
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+          <!-- Footer Start -->
+<div class="footer">
+  <div class="contain">
+    <div class="col">
+      <h1>ABOUT</h1>
+      <ul>
+        <li><a href="about.html" class="">About EC</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ambassador.php">Become an Ambassador</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+      <li><a href="terms and conditions.html" class="">Privacy Policy</a></li>
+        <li><a href="terms and conditions.html" class="">Terms & Conditions</a></li>
+        <li><a href="Community Guidlines.html" class="">Community Guidelines</a></li>
+        <li><a href="#" class="">Report Abuse</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Education</h1>
+      <ul>
+      <li><a href="blog-home.html" class="">Blog</a></li>
+        <li><a href="#" class="">EC User Manual</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Inspiration</h1>
+      <ul>
+        <li><a href="#" class="">Art & Design Market</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Connections</h1>
+      <ul>
+        <li><a href="#" class="">Members</a></li>
+        <li><a href="events.html" class="">Events</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Opportunities</h1>
+      <ul>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
+        <li><a href="#" class="">Grants</a></li>
+        <li><a href="#" class="">Advertise</a><li>
+      </ul>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="copyright-footer">
+      <p class="copyright color-text-a">
+        &copy; Copyright
+        <span class="color-a"></span> 2020 Embrace Creatives, LLC all rights reserved.Embrace Creatives is a women-owned business headquartered in metro Detroit.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+  
+      
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>

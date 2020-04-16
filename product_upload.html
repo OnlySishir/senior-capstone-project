@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EC product upload</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous" -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+    
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  </head>
+<body>
+
+
+    <!-- Nav Bar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="index.html">
+        <img src="./img/EC_logo-Black.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample03"
+        aria-controls="navbarsExample03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" />
+        </form>
+</div>
+
+<ul class="nav navbar-nav navbar-right">
+<li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li><a href="logout.php"><b>Log Out</b></a></li>
+        </ul>  
+      </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+
+<form class="form-horizontal">
+<fieldset>
+
+  <center><b></b><h1 class="h3 mb-3 font-weight-normal">Add Product</h1></b></center>
+
+  <center><p>PLEASE FILL OUT ALL FIELDS MARKED BY *asterisk*</p></center>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+<label class="col-md-4 control-label" for="product_categorie">TYPE <span class="required">*</span></label>
+  <div class="col-md-4">
+    <select id="product_categorie" name="product_categorie" required="required" class="form-control">
+    <optgroup label="Fine Art">
+        <option>Painting</option>
+        <option>Sculpture</option>
+    </optgroup>
+    <optgroup label="Craft">
+        <option>Woodworking</option>
+        <option>Ceramics</option>
+        <option>Glass</option>
+        <option>Metal</option>
+        <option>Fiber</option>
+        <option>Paper</option>
+        <option>Mixed Media</option>
+    </optgroup>
+    <optgroup label="Photography">
+        <option>Digital</option>
+        <option>Black and White</option>
+        <option>C-Type</option>
+        <option>Mixed Media</option>
+    </optgroup>
+    <optgroup label="Fashion">
+        <option>Apparel</option>
+        <option>Jewelery</option>
+        <option>Accessories</option>
+        <option>Taxtiles</option>
+    </optgroup>
+    <optgroup label="Design">
+        <option>Industrial/Product</option>
+        <option>Lighting</option>
+        <option>Furniture</option>
+        <option>Graphics</option>
+        <option>Toys</option>
+        <option>Pets</option>
+        <option>Murals/Installations</option>
+    </optgroup>
+    <optgroup label="Illustration">
+        <option>Digital</option>
+        <option>Drawing</option>
+        <option>Animation</option>
+        <option>Sketching</option>
+        <option>Prints</option>
+    </optgroup>
+    <optgroup label="Beauty/Body">
+        <option>Hair</option>
+        <option>Makeup</option>
+        <option>Skincare</option>
+        <option>Scents</option>
+        <option>Scents</option>
+        <option>Soaps</option>
+        <option>Oils</option>
+    </optgroup>
+    <optgroup label="Media">
+        <option>Books/Magazines</option>
+        <option>Zines</option>
+        <option>Comics/Graphic Novels</option>
+        <option>Calendars/Planners/Journals</option>
+    </optgroup>
+    </select>
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_title">PRODUCT TITLE <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="product_title" name="product_title" placeholder="PRODUCT TITLE" class="form-control input-md" required="required" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">PRODUCT ID</label>  
+  <div class="col-md-4">
+  <input id="product_id" name="product_id" placeholder="PRODUCT ID" class="form-control input-md" type="text">
+    
+  </div>
+</div>
+
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION <span class="required">*</span></label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="product_description" required="required" name="product_description"></textarea>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_weight">PRODUCT SIZE <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="product_size" name="product_size" placeholder="PRODUCT SIZE" class="form-control input-md" required="required" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_weight">PRODUCT WEIGHT <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="product_weight" name="product_weight" placeholder="PRODUCT WEIGHT"class="form-control input-md" required="required" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Materials_Medium">MATERIALS/MEDIUM <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="Materials_Medium" name="Materials_Medium" placeholder="MATERIALS/MEDIUM" class="form-control input-md" required="required" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Color">COLOR <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="Color" name="Color" placeholder="COLOR" class="form-control input-md" required="required" type="text">
+    
+  </div>
+</div>
+
+
+<!-- Text input
+<div class="form-group">
+  <label class="col-md-4 control-label" for="available_quantity">AVAILABLE QUANTITY</label>  
+  <div class="col-md-4">
+  <input id="available_quantity" name="available_quantity" placeholder="AVAILABLE QUANTITY" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div> -->
+
+<!-- number input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="retail">RETAIL $ <span class="required">*</span></label>  
+  <div class="col-md-4">
+  <input id="retail" name="retail" placeholder="RETAIL $" class="form-control input-md" required="required" type="number"><br>
+  <a id="emailHelp" class="form-text text-muted">To sell wholesale, upgrade your EC Membership</a> 
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="taxable">TAXABLE</label>
+  <div class="col-md-4">
+    <select id="taxable" name="TAXABLE" class="form-control">
+
+    <option>YES</option>
+  <option>NO</option>
+    </select>
+  </div>
+</div>
+
+<!-- number input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="minimum_order">MINIMUM ORDER</label>  
+  <div class="col-md-4">
+  <input id="minimum_order" name="minimum_order" placeholder="MINIMUM ORDER" class="form-control input-md" type="number">
+</div>
+</div>
+
+<!-- checkbox input -->
+<fieldset class="form-group">
+    <div class="row">
+    <label class="col-md-4 control-label" for="product_title">ORIGINAL OR LIMITED EDITION</label>  
+      <div class="col-md-4">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="col-md-3 control-label" for="gridRadios1">
+            ORIGINAL
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="col-md-3 control-label" for="gridRadios2">
+            LIMITED
+          </label>
+        </div>
+        </div>
+        </div>
+        </div>
+        <BR>
+
+<!-- number input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="quantity_stock">QUANTITY/STOCK</label>  
+  <div class="col-md-4">
+  <input id="quantity_stock" name="quantity_stock" placeholder="QUANTITY/STOCK" class="form-control input-md" type="number">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="customizable">ITEM IS CUSTOMIZABLE</label>
+  <div class="col-md-4">
+    <select id="customizable" name="customizable" class="form-control">
+
+    <option>YES</option>
+  <option>NO</option>
+
+    </select>
+    
+
+  <br>
+ <!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="filebutton">MAIN IMAGE <span class="required">*</span></label>
+  <div class="col-md-4">
+    <input id="filebutton" name="filebutton" required="required" class="input-file" type="file">
+  </div>
+</div>
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="filebutton">OTHER IMAGES</label>
+  <div class="col-md-4">
+    <input id="filebutton" name="filebutton" class="input-file" type="file"> &nbsp;<input id="filebutton" name="filebutton" class="input-file" type="file"> <br>
+
+    <input id="filebutton" name="filebutton" class="input-file" type="file"> <br>
+    <input id="filebutton" name="filebutton" class="input-file" type="file"><br>
+  </div>
+</div>
+</div>
+</div>
+<!-- Button -->
+
+
+<!-- checkbox input -->
+<fieldset class="form-group">
+    <div class="row">
+    <label class="col-md-4 control-label" for="product_title">FREE SHIPPING</span></label>  
+      <div class="col-md-4">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ship" id="ship1" value="option1">
+          <label class="col-md-2 control-label" for="ship1">
+            YES
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ship" id="ship2" value="option1" onclick="EnableDisableTextBox(this)">
+          <label class="col-md-2 control-label" for="ship2">
+            NO
+          </label>
+        </div>
+<br>
+
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+        <br>
+
+
+        <!-- number input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="shipping_charge">SHIPPING CHARGE</label>  
+  <div class="col-md-4">
+  <input id="shipcharge" name="shipping_charge" placeholder="SHIPPING CHARGE" class="form-control input-md" type="number" disabled="disabled">
+    
+  </div>
+</div>
+</fieldset>
+
+        <script type="text/javascript">
+    function EnableDisableTextBox(ship2) {
+        var shipcharge = document.getElementById("shipcharge");
+        shipcharge.disabled = ship2.checked ? false : true;
+        if (!shipcharge.disabled) {
+            shipcharge.focus();
+        }
+    }
+</script>
+
+<!-- <div class="form-group"> -->
+<div class="col-md-6">
+<button id="submit" name="submit" class="btn btn-primary"  style="float: right;">SUBMIT</button>
+  </div>
+  </div>
+
+
+</fieldset>
+</form>
+
+<!-- Footer Start -->
+<div class="footer">
+  <div class="contain">
+    <div class="col">
+      <h1>ABOUT</h1>
+      <ul>
+        <li><a href="about.html" class="">About EC</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ambassador.php">Become an Ambassador</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+        <li><a href="terms and conditions.html" class="">Privacy Policy</a></li>
+        <li><a href="terms and conditions.html" class="">Terms & Conditions</a></li>
+        <li><a href="Community Guidlines.html" class="">Community Guidelines</a></li>
+        <li><a href="#" class="">Report Abuse</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Education</h1>
+      <ul>
+        <li><a href="blog-home.html" class="">Blog</a></li>
+        <li><a href="#" class="">EC User Manual</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Inspiration</h1>
+      <ul>
+        <li><a href="#" class="">Art & Design Market</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Connections</h1>
+      <ul>
+        <li><a href="#" class="">Members</a></li>
+        <li><a href="events.html" class="">Events</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Opportunities</h1>
+      <ul>
+        <li><a href="art-calls.html" class="">Art Calls</a></li>
+        <li><a href="#" class="">Grants</a></li>
+        <li><a href="#" class="">Advertise</a><li>
+      </ul>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<br>
+<center><div class="container">
+  <div class="row justify-content-md-center">
+    <div class="copyright-footer">
+      <p class="copyright color-text-a">
+        &copy; Copyright
+           <span class="color-a"></span> 2020 Embrace Creatives, LLC all rights reserved.Embrace Creatives is a women-owned business headquartered in metro Detroit.
+      </p>
+    </div></center>
+  </div>
+</div>
+<!-- Footer End -->
+
+</body>
+</html>
