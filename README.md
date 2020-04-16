@@ -20,7 +20,7 @@ Our solution included creating a new site using html, css, bootstrap 4, and a sq
     <li> Profile editing function is available for the registered users in the website. This function is implemented for the users to take advantage of including addtional information to let other others know more about themselves.</li>
   <li> Admin has the privilage of accepting newly registered users. </li>
   <li> Admin can edit/delete existing users. </li>
-  <li> Admin can edit/delete uploaded grants,uploaded artcalls,posted blogs </li>
+  <li> Admin can edit/delete uploaded grants,uploaded artcalls,posted blogs. </li>
   </ul>
 
 # Scope
