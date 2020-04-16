@@ -10,7 +10,15 @@ Currently our client is operating their business on wordpress, and sought to tra
 
 Our solution included creating a new site using html, css, bootstrap 4, and a sql server to handle the database requirements.
 <ul>
-  <li>We migrated all of the clients existing users to a new database, created a shop page for artists to sell retail and whole sale, a page for events to be advertised, a page for grants to be advertised, and a platform for business users to contact and purchase specific pieces from artists directly at bulk quantities.</li>
+  <li>All of the existing users has been migrated from Wordpress with hashed passwords to a new database to have access to the  new Embrace Creatives website.</li>
+  <li>A product adding feature that lets an artist to add their artwork/product at a retail or wholesale price based on the membership. </li>
+  <li> A shopping function for all the users in the website with an opprtunity to buy wholesale products for certified business users.  
+   <li>Search function for users to quickly find what they are looking for. 
+   <li>A grant feature for business users to support and fund artists by adding different types of opportunities. 
+   <li>An art call feature for business users to showcase different types of art call opprtunities for the artists to sell their best artworks. </li>
+    <li> A blog feature for authors and admin to express their thoughts and opinions. 
+    <li> Profile editing function is available for the registered user in the website. This function is implemented to take advantage of including addtional information to let other others know more.</li>
+  <li>
   </ul>
 
 # Scope
