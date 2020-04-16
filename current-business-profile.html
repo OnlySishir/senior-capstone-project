@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Current Business/Trade Profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- https://bootsnipp.com/snippets/K0ZmK    GOT DESIGN FROM HERE -->
+    
+<style>
+.emp-profile{
+    padding: 0.1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -15%;
+    width: 70%;
+    border: none;
+    border-radius: 10;
+    font-size: 15px;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+</style>
+
+
+
+    <br>
+    <div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <!-- CREATE FIELD FOR PROFILE PICTURE IN BUSINESS FORMS -->
+                            <!-- MAKE THIS THE USER PROFILE OPTION -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <!-- CONNECT THIS TO THE "edit-basic-business" form -->
+                        <input href="edit-basic-business.html" type="button" class="profile-edit-btn" value="Edit Profile"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work"> <!-- Insert current User's Information -->
+                            <p class="font-weight-bold">Name of Company</p>
+                            <a>First, Last Name</a> <!-- replace with current user name -->
+                            <br>
+                            <a>Title</a> <!-- replace with current business title -->
+                            <br>
+                            <a>Address Line 1</a> <!-- replace with current business address 1 -->
+                            <br>
+                            <a>Address Line 2</a> <!-- replace with current business address 2 -->
+                            <br>
+                            <a>City, State, Country</a> <!-- replace with current business location -->
+                            <br>
+                            <a>Industry Listing</a> <!-- replace with current business industry listing -->
+                            <br>
+                            <a>Year Founded</a> <!-- replace with current business year founded -->
+                            <br>
+                            <br>
+                            <a>About </a>
+                            <!-- Display "ABOUT" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Number of Employees</a>
+                            <!-- DIDSPLAY "Number of employees" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Service and Benefits</a>
+                            <!-- DISPLAY "Service and Benefits" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Awards</a>
+                            <!-- DISPLAY "awards" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Association and Affiliations</a>
+                            <!-- DISPLAY "Association and affiliations" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Type of Business/Trade I Want to Connect With!</a>
+                            <!-- DISPLAY "business connection" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Type of Artist/Designer I Want to Connect With!</a>
+                            <!-- DISPLAY "business connection" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Additional Information</a>
+                            <!-- DISPLAY "additional information" FOR BUSINESS -->
+                            <br>
+                            <br>
+                            <a>Settings</a>
+                            <br>
+                            <br>
+                            <a>Tags</a>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!-- DEFAULT VIDEO. ADD INTRODUCTION VIDEO FROM THE USER FORMS-->
+                                                <!-- EMBED THE VIDEO -->
+                                                <iframe width="620" height="345" src="https://www.youtube.com/embed/No8-mBek3rs"></iframe>                                                
+                                                <h3>Introduction Video</h3>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <hr width="100%">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h2>Opportunities</h2>
+                                                <br>
+                                                <h3>Grants</h3>
+                                                <div class="text" style="text-align: left;">			
+                                                        <h4>
+                                                        <a href="#>">Title</a>
+                                                        </h4>
+                                                        <p><strong>Category:</strong></p>
+                                                        <p><strong>Amount:</strong></p>
+                                                        <p><strong>Open To:</strong></p>
+                                                        <p><strong>Deadline:</strong></p>
+                                                </div>
+                                                <hr width="90%">
+
+                                                <!-- Display Art Calls and Grants by this user here -->
+                                                <!-- this was the code used to display the grants in the "grantlist.php" file-->
+
+                                                <!--
+                                                    <?php foreach($grantlist as $key => $row){?>
+                                                    <div class="text" style="text-align: left;">			
+                                                        <h4>
+                                                        <a href="<?= $row['website']?>"><?= $row['title']?></a>
+                                                        </h4>
+                                                        <p><strong>Category:</strong> <?= $row['type_funding']?></p>
+                                                        <p><strong>Amount:</strong> <?= $row['amount']?></p>
+                                                        <p><strong>Open To:</strong> <?= $row['open_to']?></p>
+                                                        <p><strong>Deadline:</strong> <?= date('Y-m-d', strtotime($row['deadline']))?></p>
+                                                    </div>
+                                                    <hr width="90%">
+                                                    <?php }?>
+                                                -->
+                                                <br>
+                                        </div>
+                                        <hr width="100%"
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <br>
+                                                <h3>Art Calls</h3>
+                                                <div class="text" style="text-align: left;">			
+                                                        <h4>
+                                                        <a href="<?= $row['website#">Title</a>
+                                                        </h4>
+                                                        <p><strong>Category:</strong></p>
+                                                        <p><strong>State:</strong></p>
+                                                        <p><strong>Deadline:</strong></p>
+                                                </div>
+                                                <hr width="90%">
+                                                <!-- Similarly, Can art calls be displayed in this format?-->
+
+                                                <!--
+                                                    <?php foreach($grantlist as $key => $row){?>
+                                                    <div class="text" style="text-align: left;">			
+                                                        <h4>
+                                                        <a href="<?= $row['website']?>"><?= $row['title']?></a>
+                                                        </h4>
+                                                        <p><strong>Category:</strong> <?= $row['type_funding']?></p>
+                                                        <p><strong>State:</strong> <?= $row['amount']?></p>
+                                                        <p><strong>Deadline:</strong> <?= date('Y-m-d', strtotime($row['deadline']))?></p>
+                                                    </div>
+                                                    <hr width="90%">
+                                                    <?php }?>
+                                                -->
+                                                
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <hr width="100%">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+  
+  </body>
+  
+</html>
