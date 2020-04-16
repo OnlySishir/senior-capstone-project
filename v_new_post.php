@@ -30,14 +30,14 @@
  <!-- File Button --> 
 
  <div class="form-group">
-  <input name="img_file[]" type="file" id="fileUpload" accept="image/x-png,image/gif,image/jpeg">
+  <input name="main_img[]" type="file" accept="image/x-png,image/gif,image/jpeg">
   </div>
-  <p class="text-muted" style="text-align: center;">please use only below 1500 * 1500 pixel imgs.</p>
+  <p class="text-muted" style="text-align: center;">Please use only below 1500 * 1500 pixel images.</p>
 
 <br>
 <br>
 
-<p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="add" value="Upload" onclick="return Upload()" /></p>
+<p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="add" value="Publish" /></p>
                         </form>
                         </div>
                     <br>
@@ -48,49 +48,4 @@
     </div>
 </section>
 
-<script type="text/javascript">
-function Upload() {
-    //Get reference of FileUpload.
-    var fileUpload = document.getElementById("fileUpload");
- 
-    //Check whether the file is valid Image.
-    var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
-    if (regex.test(fileUpload.value.toLowerCase())) {
- 
-        //Check whether HTML5 is supported.
-        if (typeof (fileUpload.files) != "undefined") {
-            //Initiate the FileReader object.
-            var reader = new FileReader();
-            //Read the contents of Image File.
-            reader.readAsDataURL(fileUpload.files[0]);
-            reader.onload = function (e) {
-                //Initiate the JavaScript Image object.
-                var image = new Image();
- 
-                //Set the Base64 string return from FileReader as source.
-                image.src = e.target.result;
-                       
-                //Validate the File Height and Width.
-                image.onload = function () {
-                    var height = this.height;
-                    var width = this.width;
-                    if (height > 100 || width > 100) {
-                        alert("Height and Width must not exceed 100px.");
-                        return false;
-                    }
-                    alert("Uploaded image has valid Height and Width.");
-                    return true;
-                };
- 
-            }
-        } else {
-            alert("This browser does not support HTML5.");
-            return false;
-        }
-    } else {
-        alert("Please select a valid Image file.");
-        return false;
-    }
-}
-</script>
 
